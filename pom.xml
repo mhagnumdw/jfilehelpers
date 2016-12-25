@@ -7,6 +7,7 @@
 	<version>0.3.0-SNAPSHOT</version>
 	<name>JFileHelpers</name>
 	<description>JFileHelpers is a library that automates the tedious task of parsing and creating structured text files</description>
+	<url>http://jfilehelpers.com</url>
 
 	<properties>
 		<project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
@@ -20,6 +21,20 @@
 		<maven.compiler.plugin>3.6.0</maven.compiler.plugin>
 		<maven.jar.plugin>2.6</maven.jar.plugin>
 	</properties>
+
+	<licenses>
+		<license>
+			<name>GNU General Public License, Version 2</name>
+			<url>https://www.gnu.org/licenses/old-licenses/gpl-2.0.html</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<scm>
+		<connection>scm:git:git://github.com/mhagnumdw/jfilehelpers.git</connection>
+		<developerConnection>scm:git:ssh://github.com:mhagnumdw/jfilehelpers.git</developerConnection>
+		<url>http://github.com/mhagnumdw/jfilehelpers/tree/master</url>
+	</scm>
 
 	<dependencies>
 		<dependency>
