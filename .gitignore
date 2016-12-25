@@ -4,3 +4,4 @@ bin
 TEST-*.txt
 TESTS-TestSuites.xml
 dist
+/target/

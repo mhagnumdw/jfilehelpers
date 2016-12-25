@@ -1,0 +1,91 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.coury</groupId>
+	<artifactId>jfilehelpers</artifactId>
+	<version>0.3.0-SNAPSHOT</version>
+	<name>JFileHelpers</name>
+	<description>JFileHelpers is a library that automates the tedious task of parsing and creating structured text files</description>
+
+	<properties>
+	    <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+		<!-- <scm.url>http://IP/PATH/trunk/utilitarios</scm.url> -->
+
+		<!-- maven-compiler-plugin -->
+		<maven.compiler.target>1.7</maven.compiler.target> <!-- TODO: colocar 1.7 ou 1.6 ou 1.5 ? -->
+		<maven.compiler.source>1.7</maven.compiler.source> <!-- TODO: colocar 1.7 ou 1.6 ou 1.5 ? -->
+		<maven.javadoc.plugin>2.10.4</maven.javadoc.plugin>
+		<maven.source.plugin>3.0.1</maven.source.plugin>
+		<maven.compiler.plugin>3.6.0</maven.compiler.plugin>
+	</properties>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.3</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.4</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<sourceDirectory>Source/src</sourceDirectory>
+		<testSourceDirectory>Tests/src</testSourceDirectory>
+
+		<resources>
+			<resource>
+				<filtering>false</filtering>
+				<directory>Resources</directory>
+			</resource>
+		</resources>
+
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven.compiler.plugin}</version>
+				<configuration>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
+				</configuration>
+			</plugin>
+<!-- 
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>${maven.source.plugin}</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>${maven.javadoc.plugin}</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+ -->
+
+
+		</plugins>
+	</build>
+
+</project>
