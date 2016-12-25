@@ -9,17 +9,17 @@
 	<description>JFileHelpers is a library that automates the tedious task of parsing and creating structured text files</description>
 
 	<properties>
-	    <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
-		<!-- <scm.url>http://IP/PATH/trunk/utilitarios</scm.url> -->
+		<project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
 
-		<!-- maven-compiler-plugin -->
-		<maven.compiler.target>1.7</maven.compiler.target> <!-- TODO: colocar 1.7 ou 1.6 ou 1.5 ? -->
-		<maven.compiler.source>1.7</maven.compiler.source> <!-- TODO: colocar 1.7 ou 1.6 ou 1.5 ? -->
+		<maven.compiler.target>1.7</maven.compiler.target>
+		<maven.compiler.source>1.7</maven.compiler.source>
+
+		<!-- maven plugins -->
 		<maven.javadoc.plugin>2.10.4</maven.javadoc.plugin>
 		<maven.source.plugin>3.0.1</maven.source.plugin>
 		<maven.compiler.plugin>3.6.0</maven.compiler.plugin>
+		<maven.jar.plugin>2.6</maven.jar.plugin>
 	</properties>
-
 
 	<dependencies>
 		<dependency>
@@ -35,17 +35,8 @@
 	</dependencies>
 
 	<build>
-		<sourceDirectory>Source/src</sourceDirectory>
-		<testSourceDirectory>Tests/src</testSourceDirectory>
-
-		<resources>
-			<resource>
-				<filtering>false</filtering>
-				<directory>Resources</directory>
-			</resource>
-		</resources>
-
 		<plugins>
+
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>${maven.compiler.plugin}</version>
@@ -54,7 +45,21 @@
 					<target>${maven.compiler.target}</target>
 				</configuration>
 			</plugin>
-<!-- 
+
+			<!-- Generate test jar -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>${maven.jar.plugin}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>test-jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
@@ -82,8 +87,6 @@
 					</execution>
 				</executions>
 			</plugin>
- -->
-
 
 		</plugins>
 	</build>

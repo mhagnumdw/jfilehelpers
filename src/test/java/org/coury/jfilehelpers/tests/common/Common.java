@@ -28,7 +28,7 @@ import org.coury.jfilehelpers.masterdetail.MasterDetailEngine;
 
 public class Common {
 	public static Object readTest(FileHelperEngine<? extends Object> engine, String fileName) throws IOException {
-		return engine.readResource("/test/" + fileName);
+		return engine.readResource("/" + fileName);
 	}
 
 	public static boolean assertSameDate(Date d1, Date d2) {
@@ -36,6 +36,6 @@ public class Common {
 	}
 
 	public static Object readTest(MasterDetailEngine<? extends Object, ? extends Object> engine, String fileName) throws IOException {
-		return engine.readResource("/test/" + fileName);
+		return engine.readResource("/" + fileName);
 	}
 }
